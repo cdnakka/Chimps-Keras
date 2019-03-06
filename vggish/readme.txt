@@ -12,4 +12,4 @@ python vggish_keras_smoke_test.py
 dependencies:
 Same as audioset + Keras 2.0.4
 
-
+Thanks@ https://github.com/antoinemrcr/vggish2Keras
