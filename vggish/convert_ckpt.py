@@ -11,20 +11,20 @@ from pydub import AudioSegment
 from scipy.io import wavfile
 from vggish_keras import get_vggish_keras
 
-checkpoint_file = 'vggish_weights.ckpt'
+checkpoint_file = './model_parameters/vggish_weights.ckpt'
 
 sess = tf.Session()
 tf.Graph().as_default()
 # Define the model in inference mode, load the checkpoint, and
 # locate input and output tensors.
 vggish_slim.define_vggish_slim(training=False)
-vggish_slim.load_vggish_slim_checkpoint(sess, 'vggish_model.ckpt')
+vggish_slim.load_vggish_slim_checkpoint(sess, './model_parameters/vggish_model.ckpt')
 features_tensor = sess.graph.get_tensor_by_name(
     vggish_params.INPUT_TENSOR_NAME)
 embedding_tensor = sess.graph.get_tensor_by_name(
     vggish_params.OUTPUT_TENSOR_NAME)
 
-pproc = vggish_postprocess.Postprocessor('vggish_pca_params.npz')
+pproc = vggish_postprocess.Postprocessor('./model_parameters/vggish_pca_params.npz')
 
 
 
