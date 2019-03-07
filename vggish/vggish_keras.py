@@ -1,3 +1,5 @@
+import sys
+sys.path.append("./vggish")
 from keras.layers import Input, Dense, Conv2D, MaxPooling2D, Flatten
 from keras.models import Model
 import vggish_params

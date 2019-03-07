@@ -13,3 +13,5 @@ dependencies:
 Same as audioset + Keras 2.0.4
 
 Thanks@ https://github.com/antoinemrcr/vggish2Keras
+
+create a folder model_parameters with the vggish dependencies
